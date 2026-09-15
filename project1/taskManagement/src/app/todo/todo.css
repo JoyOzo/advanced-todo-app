@@ -108,3 +108,77 @@ input::-webkit-datetime-edit {
   padding-right: 14px;
   border-radius: 5px;
 }
+.health-tag {
+  background-color: yellow;
+  padding: 7px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 4px 10px;
+}
+
+.fitness-tag {
+  padding: 7px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 4px 10px;
+}
+
+.taskList-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.taskList-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.taskList-table th,
+.taskList-table td {
+  padding: 12px 20px;
+  text-align: left;
+}
+
+.taskList-table th:nth-child(3) {
+  padding-left: 90px;
+}
+
+.taskList-table tbody tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.taskList-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.taskList-table td .delete-btn {
+  margin-right: 50px;
+  border: none;
+  background: transparent;
+  color: red;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.taskList-table td span {
+  display: inline-block;
+}
+
+.taskList-table td {
+  vertical-align: middle;
+}
+
+.due-date-container {
+  display: flex;
+  align-items: center;
+}
+
+.due-date-container .delete-btn {
+  margin-right: 50px;
+}
+
+.due-date-container span {
+  display: inline-block;
+}

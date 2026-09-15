@@ -21,4 +21,16 @@ export class TodoService {
   getAllTask() {
     return this.http.get<Task[]>(`${this.apiUrl}/api/task/all-tasks`);
   }
+    updateTodo(id: number, todo: CreateTodo): Observable<Task> {
+    return this.http.put<Task>(
+      `${this.apiUrl}/api/task/update-single-task/${id}`,
+      todo
+    );
+  }
+
+  deleteTodo(id: number): Observable<Task> {
+    return this.http.delete<Task>(
+      `${this.apiUrl}/api/task/delete-single-task/${id}`
+    );
+  }
 }

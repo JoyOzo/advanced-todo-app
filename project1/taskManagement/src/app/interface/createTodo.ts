@@ -1,6 +1,6 @@
 export interface CreateTodo {
   taskName: String;
-  dueDate: String;
+  dueDate: string;
   tags: string[];
 }
 

@@ -35,9 +35,28 @@
         @for (task of tasks(); track task) {
           <tr>
             <td>{{ task.id }}</td>
-            <td>{{ task.taskName }}</td>
-            <td>{{ task.dueDate }}</td>
-            <td>{{ task.tags }}</td>
+            <td>
+  <input type="checkbox" (change)="updateTask(task)" />
+  {{ task.taskName }}
+</td>
+
+<td class="due-date-cell">
+  <button class="delete-btn" (click)="deleteTask(task.id)">×</button>
+  <span class="date-value">{{ task.dueDate | date:'dd/MM/yyyy' }}</span>
+</td>
+            <td>
+  @for (tag of task.tags; track tag) {
+    <span
+  [ngClass]="{
+    'health-tag': tag === 'Health',
+    'fitness-tag': tag === 'Fitness'
+  }"
+  [ngStyle]="{ 'background-color': tag === 'Fitness' ? 'blue' : '' }"
+>
+  {{ tag | uppercase }}
+</span>
+  }
+</td>
           </tr>
         }
       </tbody>
